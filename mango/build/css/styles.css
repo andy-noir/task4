@@ -1,0 +1,400 @@
+/* TOOLTIPS START */
+/* default tooltip position */
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer; }
+
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  opacity: 0; }
+
+/*tooltip container*/
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 7px;
+  width: 160px;
+  border-radius: 15px;
+  background-color: #fff;
+  color: #000;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.2; }
+
+/* Triangle for the tooltip container */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #fff;
+  border-top: 5px solid #fff;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0; }
+
+/* Show tooltip on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1; }
+
+/* TOOLTIPS END */
+/* ANIMATIONS START */
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0px 0px 500px #ff00ff; }
+  to {
+    text-shadow: 0px 0px 1000px #ff00ff; } }
+@-o-keyframes glow {
+  from {
+    text-shadow: 0px 0px 500px #ff00ff; }
+  to {
+    text-shadow: 0px 0px 1000px #ff00ff; } }
+@keyframes glow {
+  from {
+    text-shadow: 0px 0px 500px #ff00ff; }
+  to {
+    text-shadow: 0px 0px 1000px #ff00ff; } }
+
+@-webkit-keyframes blink {
+  78% {
+    opacity: 1;
+    color: inherit;
+    text-shadow: inherit; }
+  79% {
+    opacity: 0.3;
+    color: #fff; }
+  80% {
+    opacity: 1;
+    text-shadow: none; }
+  81% {
+    color: inherit;
+    text-shadow: inherit; }
+  82% {
+    opacity: 0.3;
+    color: #fff;
+    text-shadow: none; }
+  83% {
+    opacity: 1;
+    color: inherit;
+    text-shadow: inherit; }
+  92% {
+    opacity: 0.2;
+    color: #fff;
+    text-shadow: none; }
+  92.5% {
+    opacity: 1;
+    color: inherit;
+    text-shadow: inherit; } }
+
+@-o-keyframes blink {
+  78% {
+    opacity: 1;
+    color: inherit;
+    text-shadow: inherit; }
+  79% {
+    opacity: 0.3;
+    color: #fff; }
+  80% {
+    opacity: 1;
+    text-shadow: none; }
+  81% {
+    color: inherit;
+    text-shadow: inherit; }
+  82% {
+    opacity: 0.3;
+    color: #fff;
+    text-shadow: none; }
+  83% {
+    opacity: 1;
+    color: inherit;
+    text-shadow: inherit; }
+  92% {
+    opacity: 0.2;
+    color: #fff;
+    text-shadow: none; }
+  92.5% {
+    opacity: 1;
+    color: inherit;
+    text-shadow: inherit; } }
+
+@keyframes blink {
+  78% {
+    opacity: 1;
+    color: inherit;
+    text-shadow: inherit; }
+  79% {
+    opacity: 0.3;
+    color: #fff; }
+  80% {
+    opacity: 1;
+    text-shadow: none; }
+  81% {
+    color: inherit;
+    text-shadow: inherit; }
+  82% {
+    opacity: 0.3;
+    color: #fff;
+    text-shadow: none; }
+  83% {
+    opacity: 1;
+    color: inherit;
+    text-shadow: inherit; }
+  92% {
+    opacity: 0.2;
+    color: #fff;
+    text-shadow: none; }
+  92.5% {
+    opacity: 1;
+    color: inherit;
+    text-shadow: inherit; } }
+
+@-webkit-keyframes btn-blink {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -o-transition: all ease-in-out 1.5s;
+    transition: all ease-in-out 1.5s; }
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -o-transition: all ease-in-out 1.5s;
+    transition: all ease-in-out 1.5s; } }
+
+@-o-keyframes btn-blink {
+  from {
+    -o-transform: scale(1);
+       transform: scale(1);
+    -o-transition: all ease-in-out 1.5s;
+    transition: all ease-in-out 1.5s; }
+  to {
+    -o-transform: scale(1.2);
+       transform: scale(1.2);
+    -o-transition: all ease-in-out 1.5s;
+    transition: all ease-in-out 1.5s; } }
+
+@keyframes btn-blink {
+  from {
+    -webkit-transform: scale(1);
+         -o-transform: scale(1);
+            transform: scale(1);
+    -o-transition: all ease-in-out 1.5s;
+    transition: all ease-in-out 1.5s; }
+  to {
+    -webkit-transform: scale(1.2);
+         -o-transform: scale(1.2);
+            transform: scale(1.2);
+    -o-transition: all ease-in-out 1.5s;
+    transition: all ease-in-out 1.5s; } }
+
+/* ANIMATIONS END */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 100vh; }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #000000;
+  z-index: 1;
+  opacity: 0.3; }
+
+.bg {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 100%;
+  height: 100%; }
+  .bg img {
+    max-width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+
+.nav-wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+  top: 0;
+  z-index: 2;
+  width: 100%; }
+  .nav-wrapper .nav {
+    -webkit-flex-basis: 60%;
+        -ms-flex-preferred-size: 60%;
+            flex-basis: 60%; }
+    .nav-wrapper .nav ul {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      list-style: none;
+      height: 50px; }
+      .nav-wrapper .nav ul li {
+        margin: 0 25px; }
+        .nav-wrapper .nav ul li .nav-link {
+          font-family: "Oswald", sans-serif;
+          font-size: 1.5em;
+          text-decoration: none;
+          color: #fff; }
+        .nav-wrapper .nav ul li i {
+          color: #fff; }
+
+.logo {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 40%;
+      -ms-flex-preferred-size: 40%;
+          flex-basis: 40%;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .logo h1 {
+    margin: 0 !important;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-size: 4.5rem;
+    color: #fff;
+    letter-spacing: 15px;
+    text-shadow: 7px 2px 2px indianred; }
+  .logo h2 {
+    margin-top: 10px;
+    text-align: center;
+    font-family: "Bad Script", cursive;
+    font-size: 2.5rem;
+    font-style: italic;
+    color: #fff;
+    text-shadow: 0px 0px 10px #fff, 0px 0px 20px #fff, 0px 0px 30px #ff00ff, 0px 0px 40px #ff00ff, 0px 0px 50px #ff00ff, 0px 0px 100px #ff00ff, 0px 0px 200px #ff00ff, 0px 0px 300px #ff00ff, 0px 0px 500px #ff00ff; }
+    .logo h2 span {
+      -webkit-animation: blink linear infinite 10s;
+           -o-animation: blink linear infinite 10s;
+              animation: blink linear infinite 10s; }
+
+.menu-btn-wrap {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 3; }
+  .menu-btn-wrap .menu-btn {
+    margin-bottom: 10px; }
+    .menu-btn-wrap .menu-btn .instagram-bottom {
+      display: none; }
+    .menu-btn-wrap .menu-btn i {
+      color: #fff;
+      -webkit-animation: btn-blink linear infinite 2s;
+           -o-animation: btn-blink linear infinite 2s;
+              animation: btn-blink linear infinite 2s; }
+
+@media (max-width: 900px) {
+  header .nav-wrapper {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    header .nav-wrapper .logo {
+      -webkit-flex-basis: 100%;
+          -ms-flex-preferred-size: 100%;
+              flex-basis: 100%; }
+      header .nav-wrapper .logo h1 {
+        font-size: 2.5rem;
+        text-shadow: 4px 2px 2px indianred; }
+      header .nav-wrapper .logo h2 {
+        font-size: 1.75rem; }
+    header .nav-wrapper .nav {
+      -webkit-flex-basis: 100%;
+          -ms-flex-preferred-size: 100%;
+              flex-basis: 100%;
+      margin-top: 20px; }
+      header .nav-wrapper .nav ul li .nav-link {
+        font-size: 1.5rem; } }
+
+@media (max-width: 900px) and (max-width: 455px) {
+  header .nav-wrapper {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    header .nav-wrapper .logo {
+      -webkit-flex-basis: 100%;
+          -ms-flex-preferred-size: 100%;
+              flex-basis: 100%; }
+      header .nav-wrapper .logo h1 {
+        font-size: 2.75rem;
+        text-shadow: 3px 2px 2px indianred; }
+      header .nav-wrapper .logo h2 {
+        font-size: 1.75rem; }
+    header .nav-wrapper .nav {
+      -webkit-flex-basis: 100%;
+          -ms-flex-preferred-size: 100%;
+              flex-basis: 100%;
+      margin-top: 15px; }
+      header .nav-wrapper .nav ul .instagram {
+        display: none; }
+      header .nav-wrapper .nav ul li .nav-link {
+        font-size: 1.45rem; }
+  .menu-btn-wrap .menu-btn .arrow-bottom {
+    display: none; }
+  .menu-btn-wrap .menu-btn .instagram-bottom {
+    display: block; } }
+
+@media (max-width: 900px) and (max-width: 365px) {
+  header .nav-wrapper {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    header .nav-wrapper .logo {
+      -webkit-flex-basis: 100%;
+          -ms-flex-preferred-size: 100%;
+              flex-basis: 100%; }
+      header .nav-wrapper .logo h1 {
+        font-size: 2.45rem;
+        text-shadow: 3px 2px 2px indianred; }
+      header .nav-wrapper .logo h2 {
+        font-size: 1.35rem; }
+    header .nav-wrapper .nav {
+      -webkit-flex-basis: 100%;
+          -ms-flex-preferred-size: 100%;
+              flex-basis: 100%;
+      margin-top: 15px; }
+      header .nav-wrapper .nav ul .instagram {
+        display: none; }
+      header .nav-wrapper .nav ul li .nav-link {
+        font-size: 1.1rem; } }

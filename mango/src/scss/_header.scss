@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #000000;
+  z-index: 1;
+  opacity: 0.3;
+}
+
+.bg {
+  display: flex;
+  max-width: 100%;
+  height: 100%;
+  img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+}
+
+.nav-wrapper {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  margin-top: 30px;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  .nav {
+    flex-basis: 60%;
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      height: 50px;
+      li {
+        margin: 0 25px;
+        .nav-link {
+          font-family: "Oswald", sans-serif;
+          font-size: 1.5em;
+          text-decoration: none;
+          color: #fff;
+        }
+        i {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  flex-basis: 40%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    margin: 0 !important;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-size: 4.5rem;
+    color: #fff;
+    letter-spacing: 15px;
+    text-shadow: 7px 2px 2px indianred;
+  }
+  h2 {
+    margin-top: 10px;
+    text-align: center;
+    font-family: "Bad Script", cursive;
+    font-size: 2.5rem;
+    font-style: italic;
+    color: #fff;
+    text-shadow: 0px 0px 10px #fff, 0px 0px 20px #fff, 0px 0px 30px #ff00ff,
+      0px 0px 40px #ff00ff, 0px 0px 50px #ff00ff, 0px 0px 100px #ff00ff,
+      0px 0px 200px #ff00ff, 0px 0px 300px #ff00ff, 0px 0px 500px #ff00ff;
+    span {
+      animation: blink linear infinite 10s;
+    }
+  }
+}
+
+.menu-btn-wrap {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 3;
+  .menu-btn {
+    margin-bottom: 10px;
+    .instagram-bottom {
+      display: none;
+    }
+    i {
+      color: #fff;
+      animation: btn-blink linear infinite 2s;
+    }
+  }
+}
