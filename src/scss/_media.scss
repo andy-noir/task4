@@ -1,0 +1,102 @@
+@media (max-width: 900px) {
+  header {
+    .nav-wrapper {
+      flex-wrap: wrap;
+      .logo {
+        flex-basis: 100%;
+        h1 {
+          font-size: 2.5rem;
+          text-shadow: 4px 2px 2px indianred;
+        }
+        h2 {
+          font-size: 1.75rem;
+        }
+      }
+      .nav {
+        flex-basis: 100%;
+        margin-top: 20px;
+        ul {
+          li {
+            .nav-link {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 455px) {
+    header {
+      .nav-wrapper {
+        flex-wrap: wrap;
+        .logo {
+          flex-basis: 100%;
+          h1 {
+            font-size: 2.75rem;
+            text-shadow: 3px 2px 2px indianred;
+          }
+          h2 {
+            font-size: 1.75rem;
+          }
+        }
+        .nav {
+          flex-basis: 100%;
+          margin-top: 15px;
+          ul {
+            .instagram {
+              display: none;
+            }
+            li {
+              .nav-link {
+                font-size: 1.45rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .menu-btn-wrap {
+      .menu-btn {
+        .arrow-bottom {
+          display: none;
+        }
+        .instagram-bottom {
+          display: block;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 365px) {
+    header {
+      .nav-wrapper {
+        flex-wrap: wrap;
+        .logo {
+          flex-basis: 100%;
+          h1 {
+            font-size: 2.45rem;
+            text-shadow: 3px 2px 2px indianred;
+          }
+          h2 {
+            font-size: 1.35rem;
+          }
+        }
+        .nav {
+          flex-basis: 100%;
+          margin-top: 15px;
+          ul {
+            .instagram {
+              display: none;
+            }
+            li {
+              .nav-link {
+                font-size: 1.1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

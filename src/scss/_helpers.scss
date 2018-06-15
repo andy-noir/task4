@@ -1,0 +1,119 @@
+/* TOOLTIPS START */
+
+/* default tooltip position */
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/*tooltip container*/
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 7px;
+  width: 160px;
+  border-radius: 15px;
+  background-color: #fff;
+  color: #000;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+/* Triangle for the tooltip container */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #fff;
+  border-top: 5px solid #fff;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* TOOLTIPS END */
+
+/* ANIMATIONS START */
+@keyframes glow {
+  from {
+    text-shadow: 0px 0px 500px #ff00ff;
+  }
+  to {
+    text-shadow: 0px 0px 1000px #ff00ff;
+  }
+}
+
+@keyframes blink {
+  78% {
+    opacity: 1;
+    color: inherit;
+    text-shadow: inherit;
+  }
+  79% {
+    opacity: 0.3;
+    color: #fff;
+  }
+  80% {
+    opacity: 1;
+    text-shadow: none;
+  }
+  81% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  82% {
+    opacity: 0.3;
+    color: #fff;
+    text-shadow: none;
+  }
+  83% {
+    opacity: 1;
+    color: inherit;
+    text-shadow: inherit;
+  }
+  92% {
+    opacity: 0.2;
+    color: #fff;
+    text-shadow: none;
+  }
+  92.5% {
+    opacity: 1;
+    color: inherit;
+    text-shadow: inherit;
+  }
+}
+
+@keyframes btn-blink {
+  from {
+    transform: scale(1);
+    transition: all ease-in-out 1.5s;
+  }
+  to {
+    transform: scale(1.2);
+    transition: all ease-in-out 1.5s;
+  }
+}
+/* ANIMATIONS END */
